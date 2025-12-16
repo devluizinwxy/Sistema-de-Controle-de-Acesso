@@ -80,10 +80,4 @@ Senhas corretas e incorretas
 
 Conferência manual do relatório final
 
-8️⃣ Observações
 
-Sistema modular e fácil de entender
-
-Comentários explicativos no código
-
-Pronto para envio ou publicação no GitHub
