@@ -1,0 +1,18 @@
+RELATÓRIO DE CONTROLE DE ACESSO
+================================
+Total de tentativas: 11
+Permitidas: 6
+Negadas: 5
+
+DETALHAMENTO DAS TENTATIVAS:
+2025-03-10T08:15 | Recepcao | P01 - Ana Visitante | PERMITIDO
+2025-03-10T08:20 | Cofre | P01 - Ana Visitante | NEGADO (NIVEL_INSUFICIENTE)
+2025-03-10T09:00 | Escritorio Geral | P02 - Bruno Func | PERMITIDO
+2025-03-10T09:10 | CPD | P02 - Bruno Func | NEGADO (SENHA_INVALIDA)
+2025-03-10T10:05 | Cofre | P03 - Carla Ger | PERMITIDO
+2025-03-10T10:10 | Sala Diretoria | P03 - Carla Ger | NEGADO (SENHA_INVALIDA)
+2025-03-10T11:00 | CPD | P04 - Daniel Admin | PERMITIDO
+2025-03-10T11:15 | Sala Reuniao | P07 - Visitante Vip | NEGADO (NIVEL_INSUFICIENTE)
+2025-03-10T11:30 | Recepcao | P99 - DESCONHECIDO | NEGADO (PESSOA_INEXISTENTE)
+2025-03-10T11:45 | Cofre | P06 - Senha Fraca | PERMITIDO
+2025-03-10T12:00 | Estacionamento Interno | P02 - Bruno Func | PERMITIDO

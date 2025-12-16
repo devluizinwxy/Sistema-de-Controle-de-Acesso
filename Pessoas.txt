@@ -1,0 +1,7 @@
+P01;Ana Visitante;ana.visitante@email.com;123;VISITANTE
+P02;Bruno Func;bruno.func@if.com.br;senha123;FUNCIONARIO
+P03;Carla Ger;carla.gerente@empresa.com;g3r3nt3;GERENTE
+P04;Daniel Admin;daniel.admin@corp.com;root123;ADMINISTRADOR
+P05;Email Invalido;email-invalido-sem-arroba;abc;FUNCIONARIO
+P06;Senha Fraca;senha.fraca@empresa.com;123;GERENTE
+P07;Visitante Vip;vip.visitante@empresa.com;vip123;VISITANTE

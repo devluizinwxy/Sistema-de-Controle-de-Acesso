@@ -1,0 +1,7 @@
+Recepcao;VISITANTE
+Escritorio Geral;FUNCIONARIO
+Sala Reuniao;FUNCIONARIO
+Cofre;GERENTE
+CPD;ADMINISTRADOR
+Sala Diretoria;GERENTE
+Estacionamento Interno;FUNCIONARIO
