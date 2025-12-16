@@ -1,83 +1,107 @@
-Sistema de Controle de Acesso
-1️⃣ Objetivo
+🎯 Sistema de Controle de Acesso
 
-Simula um sistema de controle de acesso para uma organização, registrando tentativas de entrada em áreas restritas.
-Lê arquivos de entrada (pessoas.txt, areas.txt, tentativas.txt), processa os dados com Java NIO e Streams e gera um relatório (relatorio_acessos.txt).
+Projeto de Java que simula um sistema de controle de acesso em uma organização, registrando e auditando tentativas de entrada em áreas restritas.
 
-2️⃣ Estrutura do Projeto
-src/
-├─ entities/         # Classes de domínio: Pessoa, Visitante, Funcionario, Gerente, Administrador, AreaRestrita
-├─ interfaces/       # Interface Autenticavel
-├─ exception/        # Exceções personalizadas
-├─ entities/enum/    # Enum NivelAcesso
-├─ utils/            # Classes auxiliares (TentativaBruta)
-├─ ControladorAcessos.java
-└─ Main.java
+🔹 Sobre o Projeto
 
-pessoas.txt
-areas.txt
-tentativas.txt
-relatorio_acessos.txt
-README.md
+Este sistema foi desenvolvido para ler arquivos de entrada, processar tentativas de acesso usando Java Streams e NIO e gerar relatórios detalhados em arquivo de texto.
+O projeto demonstra conceitos de orientação a objetos, exceções personalizadas e processamento declarativo com Streams.
 
-3️⃣ Arquivos de Entrada
+Principais conceitos aplicados:
 
-pessoas.txt: id; nome; email; senha; nível de acesso
+Orientação a objetos (POO)
 
-areas.txt: nome da área; nível mínimo de acesso
+Interfaces e herança (Autenticavel, Pessoa e subclasses)
 
-tentativas.txt: id da pessoa; nome da área; senha informada; data/hora ISO
+Enumerações (NivelAcesso)
 
-Todos devem estar na raiz do projeto para que o programa funcione corretamente.
+Streams API (map, filter, collect, groupingBy)
 
-4️⃣ Como Executar
+Arquivos com NIO (Path, Files)
 
-Certifique-se de que os arquivos de entrada estão na raiz do projeto.
+🔹 Estrutura do Projeto
+ControleAcesso/
+│
+├─ src/
+│   ├─ entities/          # Classes de domínio (Pessoa, Visitante, Funcionario, Gerente, Administrador, AreaRestrita)
+│   ├─ interfaces/        # Interface Autenticavel
+│   ├─ exception/         # Exceções personalizadas
+│   ├─ entities/enum/     # Enum NivelAcesso
+│   ├─ utils/             # Classes auxiliares (TentativaBruta)
+│   ├─ ControladorAcessos.java
+│   └─ Main.java
+│
+├─ pessoas.txt            # Arquivo de entrada de pessoas
+├─ areas.txt              # Arquivo de entrada de áreas
+├─ tentativas.txt         # Arquivo de entrada de tentativas
+├─ relatorio_acessos.txt  # Relatório gerado automaticamente
+└─ README.md
+
+🔹 Funcionalidades
+
+✅ Carregamento de dados de pessoas, áreas e tentativas de acesso
+
+✅ Validação de e-mails e senhas
+
+✅ Controle de acesso baseado em níveis (VISITANTE, FUNCIONARIO, GERENTE, ADMINISTRADOR)
+
+✅ Registro de logs detalhados (PERMITIDO / NEGADO)
+
+✅ Estatísticas e agrupamentos com Streams (groupingBy, partitioningBy)
+
+✅ Geração automática de relatório completo em arquivo texto
+
+🔹 Como Executar
+
+Coloque os arquivos de entrada (pessoas.txt, areas.txt, tentativas.txt) na raiz do projeto.
 
 Compile todas as classes:
 
 javac src/**/*.java
 
 
-Execute o sistema:
+Execute o programa:
 
 java -cp src Main
 
 
-O relatório será gerado automaticamente como relatorio_acessos.txt.
+O sistema irá gerar automaticamente relatorio_acessos.txt com todas as tentativas registradas e suas estatísticas.
 
-5️⃣ Funcionalidades
+🔹 Tecnologias Utilizadas
 
-Validação de e-mails e senhas ao carregar os dados
+Java 17+
 
-Autenticação de usuários com interface Autenticavel
+Java NIO (Path, Files)
 
-Controle de acesso baseado no nível mínimo de cada área
+Java Streams API
 
-Registro de logs detalhados (permitido/negado)
+Orientação a objetos (POO)
 
-Estatísticas com Streams e Collectors.groupingBy
+Exceções personalizadas
 
-Relatório completo em arquivo texto usando NIO
+🔹 Aprendizados e Boas Práticas
 
-6️⃣ Boas Práticas
+Uso de Map para acesso rápido a pessoas e áreas
 
-Map para buscas rápidas
+Tratamento de exceções com mensagens claras (EmailInvalidoException, SenhaInvalidaException)
 
-Exceções personalizadas para clareza
+Processamento declarativo com Streams
 
-Streams para processamento declarativo
+Estrutura modular, coesa e de fácil manutenção
 
-Cada classe com responsabilidade única
+🔹 Preview do Relatório
+RELATÓRIO DE CONTROLE DE ACESSO
+===============================
+Total de tentativas: 11
+Permitidas: 6
+Negadas: 5
 
-7️⃣ Testes Realizados
+DETALHAMENTO DAS TENTATIVAS:
+2025-03-10T08:15 | Recepcao | P01 - Ana Visitante | PERMITIDO
+2025-03-10T08:20 | Cofre | P01 - Ana Visitante | NEGADO (NIVEL_INSUFICIENTE)
+...
 
-Tentativas válidas e inválidas
+🔹 Contato
 
-Pessoas e áreas inexistentes
-
-Senhas corretas e incorretas
-
-Conferência manual do relatório final
-
-
+Feito por Luis de Jesus Fernandes – https://www.linkedin.com/in/luis-fernandes-3a4a15207/
+ | https://github.com/devluizinwxy
